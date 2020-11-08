@@ -14,7 +14,7 @@ function getTime() {
     }
 
     if(minutes.length < 2){
-        minuites = "0" + minutes;
+        minutes = "0" + minutes;
     }
 
     if(seconds.length < 2){
@@ -28,8 +28,6 @@ function getTime() {
     clock.textContent = getClock;
 }
 
-getTime();
-
 function getDate(){
     let months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "Septempber", "October", "November", "December"]; //arrays
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; //arrays
@@ -38,14 +36,11 @@ function getDate(){
     let day = currentDate.getDay();
     let year = currentDate.getFullYear();
 
-    if(year < 1000){
-        year += 1900;
-    }
-
-    let getDate = days[day] + " - " + months[month] + " " + day + ", " +year;
+    let getDate = days[day] + " - " + months[month] + " " + day + ", " + year;
     
     date.textContent = getDate;   
     
 }
 
+getTime();
 getDate();
