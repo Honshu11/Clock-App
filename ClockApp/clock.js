@@ -8,6 +8,7 @@ function getTime() {
     let hours = time.getHours() % 12;
     let minutes = time.getMinutes();
     let seconds = time.getSeconds();
+    let timeOfDay = hours >= 12 ? "PM" : "AM";
 
     if(hours.length < 2){
         hours = "0" + hours;
