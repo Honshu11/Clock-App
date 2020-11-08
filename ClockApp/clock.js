@@ -34,9 +34,10 @@ function getDate(){
     let currentDate = new Date();
     let month = currentDate.getMonth();
     let day = currentDate.getDay();
+    let actualDate = currentDate.getDate();
     let year = currentDate.getFullYear();
 
-    let getDate = days[day] + " - " + months[month] + " " + day + ", " + year;
+    let getDate = days[day] + " - " + months[month] + " " + actualDate + ", " + year;
     
     date.textContent = getDate;   
     
