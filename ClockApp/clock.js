@@ -22,7 +22,7 @@ function getTime() {
         seconds = "0" + seconds;
     }
 
-    let getClock = hours + " : " + minutes + " : " + seconds;
+    let getClock = hours + " : " + minutes + " : " + seconds + " " + timeOfDay;
 
     setInterval(getTime); //makes clock tick in browser.
 
