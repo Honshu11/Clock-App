@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@300&family=Roboto+Condensed&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: fit-content;
+    background-image: url(https://unsplash.com/photos/kRNZiGKtz48);
+    font-family: 'Lato', 'Nunito', 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#ToDoListHeader {
+    font-weight: bolder;
+}
+
+.input {
+    margin-right: 5px;
+}
+
+#plusBtn {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#plusSign {
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.editBtn {
+    font-family: 'Lato', 'Nunito', 'Roboto Condensed', sans-serif;
+    margin-left: 5px;
+}
+
+.removeBtn {
+    font-family: 'Lato', 'Nunito', 'Roboto Condensed', sans-serif;
+    margin-left: 5px;
+}
