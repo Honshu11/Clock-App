@@ -8,27 +8,26 @@ function getTime() {
     let hours = time.getHours() % 12;
     let minutes = time.getMinutes();
     let seconds = time.getSeconds();
+    let timeOfDay = hours >= 12 ? "PM" : "AM";
 
     if(hours.length < 2){
         hours = "0" + hours;
     }
 
     if(minutes.length < 2){
-        minuites = "0" + minutes;
+        minutes = "0" + minutes;
     }
 
     if(seconds.length < 2){
         seconds = "0" + seconds;
     }
 
-    let getClock = hours + " : " + minutes + " : " + seconds;
+    let getClock = hours + " : " + minutes + " : " + seconds + " " + timeOfDay;
 
     setInterval(getTime); //makes clock tick in browser.
 
     clock.textContent = getClock;
 }
-
-getTime();
 
 function getDate(){
     let months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "Septempber", "October", "November", "December"]; //arrays
@@ -36,16 +35,14 @@ function getDate(){
     let currentDate = new Date();
     let month = currentDate.getMonth();
     let day = currentDate.getDay();
+    let actualDate = currentDate.getDate();
     let year = currentDate.getFullYear();
 
-    if(year < 1000){
-        year += 1900;
-    }
-
-    let getDate = days[day] + " - " + months[month] + " " + day + ", " +year;
+    let getDate = days[day] + " - " + months[month] + " " + actualDate + ", " + year;
     
     date.textContent = getDate;   
     
 }
 
+getTime();
 getDate();
