@@ -10,7 +10,7 @@ function getTime() {
     let seconds = time.getSeconds();
     let timeOfDay = hours >= 12 ? "PM" : "AM";
 
-    if(hours.length < 2){
+    if(hours.length < 2){ //cant check length of an integer
         hours = "0" + hours;
     }
 
